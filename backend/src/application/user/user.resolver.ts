@@ -1,4 +1,5 @@
-import { Resolver, Query, Mutation, Args, ID } from '@nestjs/graphql';
+// eslint-disable-next-line object-curly-newline
+import { Resolver, Query, Mutation, Args, ID, Context } from '@nestjs/graphql';
 import { UserService } from './user.service';
 
 import { User } from '../../models/user.model';
@@ -37,8 +38,13 @@ export class UserResolver {
   @Query(() => User, {
     description: 'Get user by user id',
   })
-  async findOne(@Args('id', { type: () => ID }) id: number): Promise<UserDto> {
+  async findOne(
+    @Context() context: any,
+    @Args('id', { type: () => ID }) id: number,
+  ): Promise<UserDto> {
     try {
+      const headers = context.req.headers;
+      console.log(headers);
       const user = await this.userService.get(id);
       return user;
     } catch (error) {
@@ -48,8 +54,10 @@ export class UserResolver {
   @Query(() => [User], {
     description: 'Get all users',
   })
-  async findAll(): Promise<UserDto[]> {
+  async findAll(@Context() context: any): Promise<UserDto[]> {
     try {
+      const headers = context.req.headers;
+      console.log(headers);
       const users = await this.userService.all();
       return users;
     } catch (error) {

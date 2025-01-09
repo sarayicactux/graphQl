@@ -19,7 +19,7 @@ module.exports = {
   rules: {
     'linebreak-style': 0,
     'strict': 0,
-    'max-len': ['error', { code: 120 }],
+    'max-len': ['error', { code: 200 }],
     'quote-props': 'off',
     'no-param-reassign': 'off',
     'no-underscore-dangle': 'off',
