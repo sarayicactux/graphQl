@@ -48,11 +48,19 @@ export class User extends Model {
 
   @Field()
   @Column({
+    type: Sequelize.TEXT,
+    allowNull: true,
+  })
+  token: string;
+
+  @Field()
+  @Column({
     defaultValue: new Date(),
     allowNull: false,
     type: Sequelize.DATE,
   })
   createdAt: Date;
+
   @Field()
   @Column({
     defaultValue: new Date(),

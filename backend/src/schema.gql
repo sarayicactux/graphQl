@@ -8,6 +8,7 @@ type User {
   password: String!
   name: String!
   lastName: String!
+  token: String!
   createdAt: DateTime!
   updatedAt: DateTime!
 }

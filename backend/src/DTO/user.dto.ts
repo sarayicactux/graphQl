@@ -50,6 +50,9 @@ export class UserDto {
   @Field(() => String, { description: 'name of the user' })
   name: string;
 
+  @Field(() => String, { description: 'auth token' })
+  token?: string;
+
   @IsNotEmpty()
   @Field(() => String, { description: 'lastname of the user' })
   lastName: string;

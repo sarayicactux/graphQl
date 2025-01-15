@@ -44,8 +44,7 @@ export class UserResolver {
   ): Promise<UserDto> {
     try {
       const headers = context.req.headers;
-      console.log(headers);
-      const user = await this.userService.get(id);
+      const user = await this.userService.get(id, headers);
       return user;
     } catch (error) {
       return error;
@@ -57,8 +56,7 @@ export class UserResolver {
   async findAll(@Context() context: any): Promise<UserDto[]> {
     try {
       const headers = context.req.headers;
-      console.log(headers);
-      const users = await this.userService.all();
+      const users = await this.userService.all(headers);
       return users;
     } catch (error) {
       return error;

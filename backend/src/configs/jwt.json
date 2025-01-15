@@ -1,0 +1,72 @@
+{
+  "test": {
+    "ACCESS_TOKEN": {
+      "secretKey": "8FWQDF%$ERDFGH#$FDSJ&*#@R1!34Vh",
+      "REFRESHABLE": {
+        "signOptions": {
+          "algorithm": "HS256",
+          "expiresIn": 18000
+        }
+      },
+      "PERMANENT": {
+        "signOptions": {
+          "algorithm": "HS256"
+        }
+      }
+    },
+    "REFRESH_TOKEN": {
+      "secretKey": "#7h*7y!JHpZ2#ssH#$FDSJVpKKf",
+      "signOptions": {
+        "algorithm": "HS256",
+        "expiresIn": 240
+      }
+    }
+  },
+  "development": {
+    "ACCESS_TOKEN": {
+      "secretKey": "&M4BKd4dfg%^3wf34$ddg56&fP!",
+      "REFRESHABLE": {
+        "signOptions": {
+          "algorithm": "HS256",
+          "expiresIn": 18000
+        }
+      },
+      "PERMANENT": {
+        "signOptions": {
+          "algorithm": "HS256"
+         
+        }
+      }
+    },
+    "REFRESH_TOKEN": {
+      "secretKey": "4XtnmiYee#f4wsvCU74$OZ9@#d34@Bj$",
+      "signOptions": {
+        "algorithm": "HS256",
+        "expiresIn": 5184000
+      }
+    }
+  },
+  "production": {
+    "ACCESS_TOKEN": {
+      "secretKey": "4DmiYN$!@e#f4wsv!Q77BIj",
+      "REFRESHABLE": {
+        "signOptions": {
+          "algorithm": "HS256",
+          "expiresIn": 1800
+        }
+      },
+      "PERMANENT": {
+        "signOptions": {
+          "algorithm": "HS256"
+        }
+      }
+    },
+    "REFRESH_TOKEN": {
+      "secretKey": "Ngtgh%^32fdCU7sdf43D29vLb",
+      "signOptions": {
+        "algorithm": "HS256",
+        "expiresIn": 5184000
+      }
+    }
+  }
+}
