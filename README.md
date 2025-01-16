@@ -36,7 +36,7 @@ bash
 
 
 yarn start:dev
-The backend server will start, and the GraphQL playground will be available at http://localhost:<PORT> (default is 4000).
+The backend server will start, and the GraphQL playground will be available at http://localhost:3000/graphql.
 
 Frontend Setup:
 Navigate to the frontend directory:
@@ -50,7 +50,7 @@ yarn
 Start the frontend application:
 bash
 npm start
-The frontend will be available at http://localhost:3000.
+The frontend will be available at http://localhost:3003.
 
 📦 Dependencies
 Backend:
